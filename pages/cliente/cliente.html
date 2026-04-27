@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/cliente.css">
+    <title>Cliente</title>
+</head>
+
+<body>
+
+    <img src="img/6407367.jpg" class="fundo-fixo">
+
+    <header>
+        <nav>
+
+            <a class="link-header" href="index.html">Home</a>
+            <a class="link-header">Serviçõs</a>
+            <a class="link-header">Funcionarios</a>
+            <a class="link-header">Clientes</a>
+            <a class="link-header">Agendamentos</a>
+            <button class="button-header">Login</button>
+
+        </nav>
+    </header>
+
+
+    <main class="container">
+
+        <div class="form-client">
+
+            <h3>Cadastrar cliente</h3>
+            <form action="/enviar-dados" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <br><br>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br><br>
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+    </main>
+</body>
+
+</html>
