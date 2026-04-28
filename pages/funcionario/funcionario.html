@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/layouts/layout.css">
-    <title>Clientes – Cars Scheduling</title>
+    <title>Funcionários – Cars Scheduling</title>
 </head>
 
 <body>
@@ -16,8 +16,8 @@
         <nav>
             <a class="link-header" href="../index/index.html">Home</a>
             <a class="link-header" href="../servico/servico.html">Serviços</a>
-            <a class="link-header" href="../funcionario/funcionario.html">Funcionários</a>
-            <a class="link-header" href="cliente.html">Clientes</a>
+            <a class="link-header" href="funcionario.html">Funcionários</a>
+            <a class="link-header" href="../cliente/cliente.html">Clientes</a>
             <a class="link-header" href="../ordem/ordem.html">Agendamentos</a>
             <button class="btn-header" onclick="window.location.href='../login/login.html'">Login</button>
         </nav>
@@ -25,17 +25,16 @@
 
     <div class="page-container">
 
-        <!-- Título + botão abrir formulário -->
         <div class="action-bar">
-            <h1>Clientes</h1>
+            <h1>Funcionários</h1>
             <button class="btn btn-gold" onclick="document.getElementById('form-section').style.display='block'">
-                + Novo Cliente
+                + Novo Funcionário
             </button>
         </div>
 
-        <!-- Formulário de cadastro (oculto por padrão) -->
+        <!-- Formulário de cadastro -->
         <div class="card" id="form-section" style="display:none;">
-            <h2>Cadastrar Cliente</h2>
+            <h2>Cadastrar Funcionário</h2>
             <form class="form-group">
                 <label>Nome</label>
                 <input type="text" placeholder="Nome completo">
@@ -44,7 +43,19 @@
                 <input type="tel" placeholder="(99) 99999-9999">
 
                 <label>Email</label>
-                <input type="email" placeholder="cliente@email.com">
+                <input type="email" placeholder="funcionario@email.com">
+
+                <label>Salário (R$)</label>
+                <input type="number" placeholder="0,00">
+
+                <label>Data de entrada</label>
+                <input type="datetime-local">
+
+                <label>Data de nascimento</label>
+                <input type="date">
+
+                <label>Cargo / Função</label>
+                <input type="text" placeholder="Ex: Polidor, Mecânico...">
 
                 <div style="display:flex; gap:12px; margin-top:8px;">
                     <button type="submit" class="btn btn-gold">Salvar</button>
@@ -56,23 +67,23 @@
             </form>
         </div>
 
-        <!-- Listagem de clientes -->
+        <!-- Listagem -->
         <div class="card">
-            <h2>Lista de Clientes</h2>
+            <h2>Lista de Funcionários</h2>
             <table>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Nome</th>
+                        <th>Cargo</th>
                         <th>Telefone</th>
                         <th>Email</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Linhas geradas pelo JavaScript -->
                     <tr>
-                        <td colspan="5" class="empty-msg">Nenhum cliente cadastrado.</td>
+                        <td colspan="6" class="empty-msg">Nenhum funcionário cadastrado.</td>
                     </tr>
                 </tbody>
             </table>

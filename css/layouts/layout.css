@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+/* ── Reset ───────────────────────────────────────────── */
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* ── Base ────────────────────────────────────────────── */
+body {
+    background-color: rgba(3, 0, 0, 0.75);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.fundo-fixo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ── Header / Nav ────────────────────────────────────── */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    gap: 24px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.link-header {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.link-header:hover {
+    color: goldenrod;
+}
+
+.btn-header {
+    width: 130px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: goldenrod;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ── Container principal ─────────────────────────────── */
+.page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ── Card (caixa com borda dourada) ──────────────────── */
+.card {
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 3px solid goldenrod;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: goldenrod;
+}
+
+/* ── Formulário ──────────────────────────────────────── */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+    background-color: rgba(218, 165, 32, 0.25);
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* ── Botões ──────────────────────────────────────────── */
+.btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-gold {
+    background-color: goldenrod;
+    color: #000;
+}
+
+.btn-gold:hover {
+    background-color: #c8960f;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #a93226;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid goldenrod;
+    color: goldenrod;
+}
+
+.btn-outline:hover {
+    background-color: goldenrod;
+    color: #000;
+}
+
+/* ── Barra de ações (topo da listagem) ───────────────── */
+.action-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-bar h1 {
+    font-size: 1.5rem;
+}
+
+/* ── Tabela ──────────────────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgba(218, 165, 32, 0.3);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+th {
+    color: goldenrod;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* ── Badge de status ─────────────────────────────────── */
+.badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-pending  { background-color: rgba(218,165,32,0.3); color: goldenrod; }
+.badge-done     { background-color: rgba(39,174,96,0.3);  color: #27ae60; }
+.badge-canceled { background-color: rgba(192,57,43,0.3);  color: #c0392b; }
+
+/* ── Mensagem vazia ──────────────────────────────────── */
+.empty-msg {
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    padding: 40px 0;
+    font-size: 0.95rem;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/layouts/layout.css">
+    <title>Agendamentos – Cars Scheduling</title>
+</head>
+
+<body>
+
+    <img src="../../img/6407367.jpg" class="fundo-fixo" alt="fundo">
+
+    <header>
+        <nav>
+            <a class="link-header" href="../index/index.html">Home</a>
+            <a class="link-header" href="../servico/servico.html">Serviços</a>
+            <a class="link-header" href="../funcionario/funcionario.html">Funcionários</a>
+            <a class="link-header" href="../cliente/cliente.html">Clientes</a>
+            <a class="link-header" href="ordem.html">Agendamentos</a>
+            <button class="btn-header" onclick="window.location.href='../login/login.html'">Login</button>
+        </nav>
+    </header>
+
+    <div class="page-container">
+
+        <div class="action-bar">
+            <h1>Agendamentos</h1>
+            <button class="btn btn-gold" onclick="document.getElementById('form-section').style.display='block'">
+                + Novo Agendamento
+            </button>
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <div class="card" id="form-section" style="display:none;">
+            <h2>Criar Ordem de Serviço</h2>
+            <form class="form-group">
+
+                <label>Cliente</label>
+                <select>
+                    <option value="">Selecione o cliente</option>
+                    <!-- Gerado pelo JavaScript -->
+                </select>
+
+                <label>Carro</label>
+                <select>
+                    <option value="">Selecione o carro</option>
+                    <!-- Gerado pelo JavaScript após selecionar o cliente -->
+                </select>
+
+                <label>Serviço</label>
+                <select>
+                    <option value="">Selecione o serviço</option>
+                    <!-- Gerado pelo JavaScript -->
+                </select>
+
+                <label>Data de início</label>
+                <input type="datetime-local">
+
+                <label>Data de término (estimada)</label>
+                <input type="datetime-local">
+
+                <label>Status</label>
+                <select>
+                    <option value="PENDENTE">Pendente</option>
+                    <option value="EM_ANDAMENTO">Em andamento</option>
+                    <option value="CONCLUIDO">Concluído</option>
+                    <option value="CANCELADO">Cancelado</option>
+                </select>
+
+                <div style="display:flex; gap:12px; margin-top:8px;">
+                    <button type="submit" class="btn btn-gold">Salvar</button>
+                    <button type="button" class="btn btn-outline"
+                        onclick="document.getElementById('form-section').style.display='none'">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Listagem -->
+        <div class="card">
+            <h2>Lista de Agendamentos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Cliente</th>
+                        <th>Carro</th>
+                        <th>Serviço</th>
+                        <th>Início</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7" class="empty-msg">Nenhum agendamento cadastrado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

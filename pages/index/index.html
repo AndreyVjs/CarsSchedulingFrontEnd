@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>CarsScheduling</title>
+    <link rel="stylesheet" href="../../css/layouts/layout.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cars Scheduling</title>
 </head>
 
 <body>
 
-    <img src="img/6407367.jpg" class="fundo-fixo">
+    <img src="../../img/6407367.jpg" class="fundo-fixo" alt="fundo">
 
-  
     <header>
         <nav>
-
-            <a class="link-header">Home</a>
-            <a class="link-header">Serviços</a>
-            <a class="link-header">Funcionarios</a>
-            <a class="link-header" href="cliente.html">Clientes</a>
-            <a class="link-header">Agendamentos</a>
-            <button class="button-header" onclick="window.location.href='login.html'">
-    Login
-</button>
-
+            <a class="link-header" href="index.html">Home</a>
+            <a class="link-header" href="../servico/servico.html">Serviços</a>
+            <a class="link-header" href="../funcionario/funcionario.html">Funcionários</a>
+            <a class="link-header" href="../cliente/cliente.html">Clientes</a>
+            <a class="link-header" href="../ordem/ordem.html">Agendamentos</a>
+            <button class="btn-header" onclick="window.location.href='../login/login.html'">Login</button>
         </nav>
     </header>
 
-    <main>
-
-    <img class="image-logo" src="img/logo_gil-garage.jpg">
-
-        <div class="texts">
+    <main class="hero">
+        <img class="logo" src="../../img/logo_gil-garage.jpg" alt="Logo">
+        <div class="hero-text">
             <h1>Cars Scheduling</h1>
-            <h2>Agende seus carros!!</h2>
-            <p>A marca criada para agendar seus carros</p>
-        <button class="button-main" id="started-button">Começar!!</button>
+            <h2>Agende seus carros!</h2>
+            <p>A plataforma criada para agendar serviços de estética automotiva.</p>
+            <button class="btn btn-gold" style="margin-top:24px;" onclick="window.location.href='../login/login.html'">
+                Começar
+            </button>
         </div>
-
     </main>
-    
-    <div class="insirir">
-        <h1 id="p-inserir">Que dia você quer agendar?</h1>
-        <input type="date" id="text"></div>
-    </div>
 
-    <div class="form">
-        <P>Carro</P>
-
-        <input id="car-input"></input>
-
-        <P>Serviço</P>
-
-        <input id="services-input"></input>
-    </div>
-        <div class="new-texts" id="new-text">
-        </div>
-
-    <script src="js/script.js"></script>
 </body>
+
 </html>

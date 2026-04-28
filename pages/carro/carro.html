@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/layouts/layout.css">
-    <title>Clientes – Cars Scheduling</title>
+    <title>Carros do Cliente – Cars Scheduling</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <a class="link-header" href="../index/index.html">Home</a>
             <a class="link-header" href="../servico/servico.html">Serviços</a>
             <a class="link-header" href="../funcionario/funcionario.html">Funcionários</a>
-            <a class="link-header" href="cliente.html">Clientes</a>
+            <a class="link-header" href="../cliente/cliente.html">Clientes</a>
             <a class="link-header" href="../ordem/ordem.html">Agendamentos</a>
             <button class="btn-header" onclick="window.location.href='../login/login.html'">Login</button>
         </nav>
@@ -25,26 +25,33 @@
 
     <div class="page-container">
 
-        <!-- Título + botão abrir formulário -->
+        <!-- Cabeçalho da página com o nome do cliente carregado via JS -->
         <div class="action-bar">
-            <h1>Clientes</h1>
+            <div>
+                <a href="../cliente/cliente.html" style="color:goldenrod; font-size:0.85rem;">← Voltar aos clientes</a>
+                <h1 style="margin-top:6px;">Carros do Cliente</h1>
+                <p style="color:#aaa; font-size:0.9rem;">Nome do cliente aparecerá aqui</p>
+            </div>
             <button class="btn btn-gold" onclick="document.getElementById('form-section').style.display='block'">
-                + Novo Cliente
+                + Novo Carro
             </button>
         </div>
 
-        <!-- Formulário de cadastro (oculto por padrão) -->
+        <!-- Formulário de cadastro -->
         <div class="card" id="form-section" style="display:none;">
-            <h2>Cadastrar Cliente</h2>
+            <h2>Cadastrar Carro</h2>
             <form class="form-group">
-                <label>Nome</label>
-                <input type="text" placeholder="Nome completo">
+                <label>Nome / Modelo</label>
+                <input type="text" placeholder="Ex: Civic, Corolla...">
 
-                <label>Telefone</label>
-                <input type="tel" placeholder="(99) 99999-9999">
+                <label>Marca</label>
+                <input type="text" placeholder="Ex: Honda, Toyota...">
 
-                <label>Email</label>
-                <input type="email" placeholder="cliente@email.com">
+                <label>Cor</label>
+                <input type="text" placeholder="Ex: Prata, Preto...">
+
+                <label>Placa</label>
+                <input type="text" placeholder="AAA-0000">
 
                 <div style="display:flex; gap:12px; margin-top:8px;">
                     <button type="submit" class="btn btn-gold">Salvar</button>
@@ -56,23 +63,23 @@
             </form>
         </div>
 
-        <!-- Listagem de clientes -->
+        <!-- Listagem -->
         <div class="card">
-            <h2>Lista de Clientes</h2>
+            <h2>Carros cadastrados</h2>
             <table>
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Cor</th>
+                        <th>Placa</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Linhas geradas pelo JavaScript -->
                     <tr>
-                        <td colspan="5" class="empty-msg">Nenhum cliente cadastrado.</td>
+                        <td colspan="6" class="empty-msg">Nenhum carro cadastrado para este cliente.</td>
                     </tr>
                 </tbody>
             </table>
