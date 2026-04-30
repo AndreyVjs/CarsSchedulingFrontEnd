@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/layouts/layout.css">
+    <link rel="stylesheet" href="../../global/layouts/layout.css">
     <title>Clientes – Cars Scheduling</title>
 </head>
 
@@ -38,16 +38,16 @@
             <h2>Cadastrar Cliente</h2>
             <form class="form-group">
                 <label>Nome</label>
-                <input type="text" placeholder="Nome completo">
+                <input oninput="validarCampo()" type="text" placeholder="Nome completo" id="name-customer-input">
 
                 <label>Telefone</label>
-                <input type="tel" placeholder="(99) 99999-9999">
+                <input oninput="validarCampo()" type="tel" placeholder="(99) 99999-9999" id="cellphone-customer-input">
 
                 <label>Email</label>
-                <input type="email" placeholder="cliente@email.com">
+                <input oninput="validarCampo()" type="email" placeholder="cliente@email.com" id="email-customer-input">
 
                 <div style="display:flex; gap:12px; margin-top:8px;">
-                    <button type="submit" class="btn btn-gold">Salvar</button>
+                    <button type="submit" class="btn btn-gold" id="button-customer-input">Salvar</button>
                     <button type="button" class="btn btn-outline"
                         onclick="document.getElementById('form-section').style.display='none'">
                         Cancelar
@@ -80,6 +80,7 @@
 
     </div>
 
+    <script src="ClienteScript.js" type="module"></script>
 </body>
 
 </html>

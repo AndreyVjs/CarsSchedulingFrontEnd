@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/layouts/layout.css">
+    <link rel="stylesheet" href="../../global/layouts/layout.css">
     <title>Serviços – Cars Scheduling</title>
 </head>
 
@@ -37,16 +37,16 @@
             <h2>Cadastrar Serviço</h2>
             <form class="form-group">
                 <label>Nome do serviço</label>
-                <input type="text" placeholder="Ex: Lavagem completa, Polimento...">
+                <input id="name-input-servico" type="text" placeholder="Ex: Lavagem completa, Polimento...">
 
                 <label>Descrição</label>
-                <input type="text" placeholder="Breve descrição do serviço">
+                <input id="description-input-servico" type="text" placeholder="Breve descrição do serviço">
 
                 <label>Preço (R$)</label>
-                <input type="number" placeholder="0,00">
+                <input id="price-input-servico" type="number" placeholder="0,00">
 
                 <label>Tempo estimado</label>
-                <input type="text" placeholder="Ex: 2 horas, 30 minutos...">
+                <input id="estimated-time-input-servico" type="text" placeholder="Ex: 2 horas, 30 minutos...">
 
                 <label>Funcionário responsável</label>
                 <select>
@@ -89,6 +89,7 @@
 
     </div>
 
+    <script src="servico.js" type="module"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/layouts/layout.css">
+    <link rel="stylesheet" href="../../global/layouts/layout.css">
     <title>Funcionários – Cars Scheduling</title>
 </head>
 
@@ -37,28 +37,25 @@
             <h2>Cadastrar Funcionário</h2>
             <form class="form-group">
                 <label>Nome</label>
-                <input type="text" placeholder="Nome completo">
+                <input id="name-input-employee" type="text" placeholder="Nome completo">
 
                 <label>Telefone</label>
-                <input type="tel" placeholder="(99) 99999-9999">
+                <input id="phone-input-employee" type="tel" placeholder="(99) 99999-9999">
 
                 <label>Email</label>
-                <input type="email" placeholder="funcionario@email.com">
+                <input id="email-input-employee" type="email" placeholder="funcionario@email.com">
 
                 <label>Salário (R$)</label>
-                <input type="number" placeholder="0,00">
-
-                <label>Data de entrada</label>
-                <input type="datetime-local">
+                <input id="salary-input-employee" type="number" placeholder="0,00">
 
                 <label>Data de nascimento</label>
-                <input type="date">
+                <input id="birthday-input-employee" type="date">
 
                 <label>Cargo / Função</label>
-                <input type="text" placeholder="Ex: Polidor, Mecânico...">
+                <input id="role-input-employee" type="text" placeholder="Ex: Polidor, Mecânico...">
 
                 <div style="display:flex; gap:12px; margin-top:8px;">
-                    <button type="submit" class="btn btn-gold">Salvar</button>
+                    <button id="save-button-employee" type="submit" class="btn btn-gold">Salvar</button>
                     <button type="button" class="btn btn-outline"
                         onclick="document.getElementById('form-section').style.display='none'">
                         Cancelar
@@ -91,6 +88,7 @@
 
     </div>
 
+    <script src="funcionario.js" type="module"></script>
 </body>
 
 </html>
