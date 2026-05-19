@@ -2,24 +2,24 @@
 
 //GetsAll
 const getAllCustomers = 'http://localhost:3000/customer/all';
-const getAllEmployee = '';
-const getAllCars = '';
-const getAllServices = '';
-const getAllWorkOrder = '';
+const getAllEmployee = 'http://localhost:3000/employee/all';
+const getAllCars = 'http://localhost:3000/car/all';
+const getAllServices = 'http://localhost:3000/service/all';
+const getAllWorkOrder = 'http://localhost:3000/?/all';
 
 //GetsByID
 const getCustomerById = 'http://localhost:3000/customer/';
 const getEmployeeById = 'http://localhost:3000/employee/';
 const getCarById = 'http://localhost:3000/car/';
-const getWorkOrderById = '';
-const getServiceById = '';
+const getWorkOrderById = 'http://localhost:3000/?/';
+const getServiceById = 'http://localhost:3000/service/';
 
 //Posts
 const postCustomer = 'http://localhost:3000/customer';
 const postEmployee = 'http://localhost:3000/employee';
-const postCar = '';
-const postService = '';
-const postWorkOrder = '';
+const postCar = 'http://localhost:3000/car';
+const postService = 'http://localhost:3000/service';
+const postWorkOrder = 'http://localhost:3000/?';
 
 //Lista completa de Customer da tabela do banco
 async function getCustomers(){
